@@ -316,6 +316,43 @@ body { font-family: 'Poppins', sans-serif; background: var(--light); color: var(
 .contact-link:hover {
     color: var(--primary); /* Glows gold on hover */
 }
+/* --- FSSAI COMPLIANCE BADGE --- */
+.fssai-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 30px auto 10px;
+    padding: 15px 25px;
+    background: rgba(255, 255, 255, 0.03); /* Soft glass box matching the theme */
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    max-width: 250px;
+}
+
+.fssai-logo {
+    height: 35px; /* Perfect scale height for compliance badges */
+    width: auto;
+    filter: brightness(0) invert(1) opacity(0.8); /* Turns the logo a clean, premium white to match footer */
+    transition: filter 0.3s ease;
+}
+
+.fssai-container:hover .fssai-logo {
+    filter: brightness(1) invert(0) opacity(1); /* Reveals true official colors on hover */
+}
+
+.fssai-text {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.6);
+    text-transform: uppercase;
+}
+
+.fssai-text span {
+    color: var(--primary); /* Highlights the license number in Swaadica Gold */
+    font-weight: 600;
+}
 
 /* Smooth entry for mobile layout */
 @media (max-width: 768px) {
