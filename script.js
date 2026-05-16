@@ -6,11 +6,11 @@ const products = [
         backImg: "./img/chilli-back img.jpg", 
         desc: "Finely ground premium chillies for vibrant color and authentic heat.",
         variants: [
-            { weight: "50g", price: 50 },
-            { weight: "100g", price: 80 },
-            { weight: "250g", price: 180 },
-            { weight: "500g", price: 300 },
-            { weight: "1kg", price: 500 }
+            { weight: "50g", price: 49 },
+            { weight: "100g", price: 89 },
+            { weight: "250g", price: 199 },
+            { weight: "500g", price: 349 },
+            { weight: "1kg", price: 599 }
         ]
     },
     { 
@@ -19,11 +19,11 @@ const products = [
         backImg: "./img/coriander-back img.jpg", 
         desc: "Aromatic and fresh ground seeds for the perfect curry base.",
         variants: [
-            { weight: "50g", price: 35 },
-            { weight: "100g", price: 60 },
-            { weight: "250g", price: 110 },
-            { weight: "500g", price: 200 },
-            { weight: "1kg", price: 350 }
+            { weight: "50g", price: 39 },
+            { weight: "100g", price: 69 },
+            { weight: "250g", price: 149 },
+            { weight: "500g", price: 249 },
+            { weight: "1kg", price: 449 }
         ]
     },
     { 
@@ -32,11 +32,11 @@ const products = [
         backImg: "./img/garam masala-back img.jpg", 
         desc: "Aromatic and fresh ground seeds for the perfect curry base.",
         variants: [
-            { weight: "50g", price: 160 },
-            { weight: "100g", price: 250 },
-            { weight: "250g", price: 550 },
-            { weight: "500g", price: 1000 },
-            { weight: "1kg", price: 1900 }
+            { weight: "50g", price: 149 },
+            { weight: "100g", price: 249 },
+            { weight: "250g", price: 549 },
+            { weight: "500g", price: 999 },
+            { weight: "1kg", price: 1949 }
         ]
     },
     { 
@@ -45,11 +45,11 @@ const products = [
         backImg: "./img/turmeric-back img.png", 
         desc: "100% Organic high-curcumin turmeric powder.",
         variants: [
-            { weight: "50g", price: 50 },
-            { weight: "100g", price: 80 },
-            { weight: "250g", price: 180 },
-            { weight: "500g", price: 300 },
-            { weight: "1kg", price: 500 }
+            { weight: "50g", price: 49 },
+            { weight: "100g", price: 79 },
+            { weight: "250g", price: 179 },
+            { weight: "500g", price: 299 },
+            { weight: "1kg", price: 549 }
         ]
     }
 ];
