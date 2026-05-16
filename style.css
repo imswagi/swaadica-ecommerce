@@ -209,6 +209,14 @@ body { font-family: 'Poppins', sans-serif; background: var(--light); color: var(
     background: linear-gradient(45deg, #f09433, #bc1888); color: white;
     padding: 12px 25px; border-radius: 30px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px;
 }
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    .nav-link-item { display: none; }
+    .navbar { padding: 10px 0; }
+    .feature-grid { flex-direction: column; gap: 30px; }
+}
+
 /* --- CONTACT & ADDRESS SECTION --- */
 .contact-section {
     padding: 80px 8%;
@@ -283,11 +291,4 @@ body { font-family: 'Poppins', sans-serif; background: var(--light); color: var(
         grid-template-columns: 1fr;
         gap: 25px;
     }
-}
-
-/* --- MOBILE RESPONSIVENESS --- */
-@media (max-width: 768px) {
-    .nav-link-item { display: none; }
-    .navbar { padding: 10px 0; }
-    .feature-grid { flex-direction: column; gap: 30px; }
 }
