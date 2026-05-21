@@ -85,71 +85,45 @@ body { font-family: 'Poppins', sans-serif; background: var(--light); color: var(
     background: var(--dark);
     transform: scale(1.05);
 }
+
+/* --- SECTIONS --- */
 /* --- NAVBAR ACTIONS CONTAINER --- */
 .nav-actions {
     display: flex;
-    align-items: center;
-    gap: 20px;
+    align-items: center;      /* Vertically aligns the button and FSSAI layout perfectly */
+    justify-content: flex-end;
+    gap: 15px;                /* Spacing between the Order Now button and FSSAI badge */
 }
 
-/* --- FSSAI NAVBAR BADGE --- */
+/* --- FSSAI NAVBAR BADGE LAYOUT --- */
 .fssai-nav-badge {
     display: flex;
     flex-direction: column;
-    align-items: flex-end; /* Aligns text perfectly to the right */
+    align-items: center;      /* Centers the text right beneath your local image */
     justify-content: center;
-    gap: 2px;
+    flex-shrink: 0;           /* Prevents the layout from crushing the image sizing */
 }
 
 .fssai-nav-logo {
-    height: 22px; /* Small, sharp, and elegant for top header menu */
+    height: 28px;             /* Professional, elegant height footprint in the nav */
     width: auto;
-    filter: brightness(0) invert(1); /* Keeps it pure white over the transparent hero section */
-    transition: filter 0.3s ease;
-}
-
-/* When the user scrolls down, turn the logo to its official green/orange colors */
-.navbar.scrolled .fssai-nav-logo {
-    filter: none; 
+    display: block;
+    object-fit: contain;
 }
 
 .fssai-nav-no {
-    font-size: 9px;
+    font-size: 8px;
     font-weight: 600;
-    letter-spacing: 0.5px;
-    color: rgba(255, 255, 255, 0.8);
-    white-space: nowrap;
+    letter-spacing: 0.3px;
+    color: rgba(255, 255, 255, 0.9); /* Clear white text over the transparent header background */
+    margin-top: 2px;
+    white-space: nowrap;      /* Keeps the license entry cleanly on a single line */
 }
 
+/* Changes text color dynamically when the navbar morphs to white on scroll */
 .navbar.scrolled .fssai-nav-no {
-    color: #555; /* Darker text for readability when navbar background turns white */
+    color: #444444;           /* High contrast gray over the scrolling white bg */
 }
-
-/* --- MOBILE BREAKPOINT ADJUSTMENTS --- */
-@media (max-width: 900px) {
-    /* Ensure action items wrap smoothly on tablets/phones */
-    .nav-actions {
-        gap: 12px;
-    }
-    
-    /* Hide the long license number on small phones to prevent layout breaking, keep just the logo */
-    .fssai-nav-no {
-        display: none;
-    }
-    
-    .fssai-nav-logo {
-        height: 18px;
-    }
-}
-
-@media (max-width: 480px) {
-    /* On tiny mobile screens, stack or limit header items if necessary */
-    .fssai-nav-badge {
-        margin-right: 5px;
-    }
-}
-
-/* --- SECTIONS --- */
 .hero {
     height: 80vh;
     display: flex;
@@ -274,6 +248,35 @@ body { font-family: 'Poppins', sans-serif; background: var(--light); color: var(
 }
 
 /* --- MOBILE RESPONSIVENESS --- */
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+    .nav-link-item { display: none; }
+    .navbar { padding: 10px 0; }
+    .feature-grid { flex-direction: column; gap: 30px; }
+    
+    /* Responsive overrides for your top-right layout alignment */
+    .nav-actions {
+        gap: 10px;            /* Tightens spacing on standard tablet screen wrappers */
+    }
+    
+    .fssai-nav-logo {
+        height: 22px;         /* Gently scales down the local image asset */
+    }
+
+    .fssai-nav-no {
+        display: none;        /* Hides the text string on smaller devices to prevent crowded overlap */
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-actions {
+        gap: 8px;             /* Compact micro gap for narrow mobile screens */
+    }
+    
+    .fssai-nav-logo {
+        height: 18px;         /* Clean, minimized asset footprint on small mobile views */
+    }
+}
 @media (max-width: 768px) {
     .nav-link-item { display: none; }
     .navbar { padding: 10px 0; }
