@@ -65,7 +65,7 @@ products.forEach((p, index) => {
             <div class="image-container">
                 <img src="${p.frontImg}" class="img-front" alt="${p.name} Front">
                 <img src="${p.backImg}" class="img-back" alt="${p.name} Back">
-                <div class="flip-hint">Hover to see back</div>
+                
             </div>
 
             <div class="card-info">
@@ -120,4 +120,47 @@ window.addEventListener('scroll', function() {
     } else {
         nav.classList.remove('scrolled');
     }
+});
+
+// ==========================================
+// 3. MOBILE HAMBURGER MENU INTERACTION ENGINE
+// ==========================================
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileToggle = document.getElementById('mobile-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    const toggleIcon = mobileToggle.querySelector('i');
+    const navLinks = document.querySelectorAll('.nav-link-item, .contact-btn');
+
+    // Tap to open or shut the side navigation canvas drawer
+    mobileToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        navMenu.classList.toggle('active');
+        
+        // Morph icons instantly
+        if (navMenu.classList.contains('active')) {
+            toggleIcon.className = 'fas fa-xmark';
+            mobileToggle.style.transform = 'rotate(90deg)';
+        } else {
+            toggleIcon.className = 'fas fa-bars';
+            mobileToggle.style.transform = 'rotate(0deg)';
+        }
+    });
+
+    // Close layout automatically when a client taps any section anchor link
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            toggleIcon.className = 'fas fa-bars';
+            mobileToggle.style.transform = 'rotate(0deg)';
+        });
+    });
+
+    // Clean Close catch: drops the drawer if a user taps anywhere outside the layout zones
+    document.addEventListener('click', (e) => {
+        if (!navMenu.contains(e.target) && !mobileToggle.contains(e.target)) {
+            navMenu.classList.remove('active');
+            toggleIcon.className = 'fas fa-bars';
+            mobileToggle.style.transform = 'rotate(0deg)';
+        }
+    });
 });
